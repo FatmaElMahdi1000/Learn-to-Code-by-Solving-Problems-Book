@@ -19,6 +19,6 @@ def cone_volume(r, h):
         result = pi * (r ** 2) * (h / 3)
         return result
 
-r = int(input("Enter the radius: "))
-h = int(input("Enter the height: "))
+r = int(input(" "))
+h = int(input(" "))
 print(cone_volume(r, h))
