@@ -18,7 +18,8 @@ with open (filename, encoding="utf-8") as txt:
         if "@" in line1:
             idx = line1.find("@")
             Email_p1.append(line1[0:idx].lower())
-            Email_p2.append(line1[idx:-1].lower())
+            Email_p2.append(line1[idx:].strip().lower())  #strip is used here to remove the "\n" new line symbol that appears at the end. much safer
+    print(Email_p2)
     for line2 in Email_p1:
         if "." in line2:
             line2 = line2.replace(".", "")
