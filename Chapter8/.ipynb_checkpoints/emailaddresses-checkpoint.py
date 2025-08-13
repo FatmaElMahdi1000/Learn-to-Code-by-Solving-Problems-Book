@@ -7,7 +7,7 @@ with open (filename, encoding="utf-8") as txt:
     text_lines = txt.readlines() #a list of lines
     """Email Addresses cleaning"""
     
-    my_set = set()
+    my_set = set()  #set remove repeated inputs, it's useful for counting the number of actual email
     Email_p1 = []
     updated_Email_p1 = []
     updated_Email_p1_final = []
