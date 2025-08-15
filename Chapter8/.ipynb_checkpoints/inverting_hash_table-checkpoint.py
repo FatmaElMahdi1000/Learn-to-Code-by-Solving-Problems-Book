@@ -12,8 +12,9 @@ def hash_table_creation(hash_table, key, value):
         hash_table[key].append(value)
     else:
         hash_table[key] = [value]
+        return hash_table
     
-def invert_it(inverted):
+def invert_it(inverted, key, value):
     """
     inverting the hash table
     parameters: 
@@ -21,7 +22,6 @@ def invert_it(inverted):
     Returns:
         inverted table/dict
     """
-    hash_table_creation(hash_table, key, value)
     if value in inverted:
         inverted[value].append(key)
     else:
@@ -36,5 +36,5 @@ for key, value in data_set:
 print(hash_table)
 
 for key, value in data_set:
-    invert_it(inverted)
+    invert_it(inverted, key, value)
 print(inverted)
