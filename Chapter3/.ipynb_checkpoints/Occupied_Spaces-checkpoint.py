@@ -1,4 +1,19 @@
 def Occupied_OR_Not(N, today, yesterday): #N parking spaces
+     """
+    Determines how many parking spaces remain occupied on both days.
+
+    Args:
+        N (int): Total number of parking spaces (must be between 1 and 100).
+        today (str): String of length N representing today's parking state 
+                     ('C' for car, '.' for empty).
+        yesterday (str): String of length N representing yesterday's parking state
+                         ('C' for car, '.' for empty).
+
+    Returns:
+        int: Number of spaces that were occupied yesterday and are still occupied today.
+        str: Error message if input values are invalid.
+        """
+    
     if not (0 < N <= 100):
         return "Something wrong about your input"
     elif (0 < N <= 100) and (len(today) == N) and (len(yesterday) == N):
