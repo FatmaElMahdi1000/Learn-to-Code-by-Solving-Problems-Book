@@ -21,9 +21,22 @@ def analysis(N, commands):
             temp = []              # start a new one
     if temp:
         sublists.append(temp)
-        
-    for sublist in sublists:  ####Carry on from where you left off here...:D 
-        
+    
+    next_number = 1  # machine starts at 1
+
+    for sublist in sublists:
+        take_count = sublist.count('TAKE')
+        serve_count = sublist.count('SERVE')
+        # 1. students late that day
+        late_students = take_count
+        # 2. remaining in line after desk closed
+        remaining = take_count - serve_count
+        if remaining < 0:
+            remaining = 0  # safety
+
+        # 3. next number for next day
+        next_number += take_count
+        return late_students, remaining, next_number
         
 N = int(input())
 commands = input()
