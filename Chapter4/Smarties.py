@@ -1,4 +1,3 @@
-
 def smarties_eating(N, colours):
     if (0 <= N <= 200):
 
