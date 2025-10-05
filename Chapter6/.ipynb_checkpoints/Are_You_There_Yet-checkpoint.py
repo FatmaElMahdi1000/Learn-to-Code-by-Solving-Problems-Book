@@ -12,7 +12,5 @@ def distance(distances):
     return grid
             
         
-
-
 distances = input()
 print(distance(distances))
